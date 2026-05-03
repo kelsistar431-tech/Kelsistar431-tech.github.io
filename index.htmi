@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelsi Star Pro - Sinais Aviator Angola</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;color:#fff;font-family:Arial,sans-serif;text-align:center;padding:20px}
+.logo{font-size:32px;font-weight:900;margin:20px 0;background:linear-gradient(90deg,#ff0080,#7928ca);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.card{background:#1a1a1a;border:2px solid #ff0080;border-radius:15px;padding:30px;margin:20px auto;max-width:400px}
+.multiplicador{font-size:48px;color:#00ff88;font-weight:900;margin:15px 0}
+.btn{background:linear-gradient(90deg,#25D366,#128C7E);color:#fff;padding:18px 30px;border:none;border-radius:50px;font-size:20px;font-weight:900;text-decoration:none;display:inline-block;margin:15px 0}
+.btn:active{transform:scale(0.95)}
+.timer{color:#ff0080;font-size:18px;margin:10px 0}
+</style>
+</head>
+<body>
+<div class="logo">🚀 KELSI STAR PRO</div>
+<div class="card">
+<div>SINAL ATIVO AGORA</div>
+<div class="multiplicador">2.35x</div>
+<div class="timer">Próximo sinal em: 00:45</div>
+<div>ENTRAR ANTES DE: 1.80x</div>
+</div>
+<a href="https://wa.me/244944220447?text=Quero%20acesso%20Kelsi%20Star%20Pro" class="btn">📱 ENTRAR NO GRUPO VIP</a>
+<div style="margin-top:30px;color:#888;font-size:14px">+500 membros | Angola 🇦🇴</div>
+</body>
+</html>
