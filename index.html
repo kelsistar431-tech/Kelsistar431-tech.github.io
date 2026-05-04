@@ -1,29 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kelsi Star Pro - Sinais Aviator Angola</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a0a;color:#fff;font-family:Arial,sans-serif;text-align:center;padding:20px}
-.logo{font-size:32px;font-weight:900;margin:20px 0;background:linear-gradient(90deg,#ff0080,#7928ca);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.card{background:#1a1a1a;border:2px solid #ff0080;border-radius:15px;padding:30px;margin:20px auto;max-width:400px}
-.multiplicador{font-size:48px;color:#00ff88;font-weight:900;margin:15px 0}
-.btn{background:linear-gradient(90deg,#25D366,#128C7E);color:#fff;padding:18px 30px;border:none;border-radius:50px;font-size:20px;font-weight:900;text-decoration:none;display:inline-block;margin:15px 0}
-.btn:active{transform:scale(0.95)}
-.timer{color:#ff0080;font-size:18px;margin:10px 0}
-</style>
+    <title>KELSI STAR PRO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { background: #0a0a0a; color: #fff; font-family: Arial; text-align: center; padding: 20px; }
+        .logo { color: #ff00ff; font-size: 28px; font-weight: bold; margin-bottom: 10px; }
+        .box { border: 2px solid #ff00ff; border-radius: 15px; padding: 25px; margin: 20px 0; }
+        .sinal { font-size: 55px; font-weight: bold; margin: 15px 0; }
+        .vermelho { color: #ff0000; text-shadow: 0 0 15px #ff0000; }
+        .azul { color: #00aaff; text-shadow: 0 0 15px #00aaff; }
+        .status { font-size: 24px; font-weight: bold; margin: 15px 0; }
+        .botao { background: linear-gradient(90deg, #00ff00, #00ffff); color: #000; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+        .timer { color: #ff00ff; font-size: 18px; }
+        .aviso { font-size: 11px; color: #888; margin-top: 25px; }
+    </style>
 </head>
 <body>
-<div class="logo">🚀 KELSI STAR PRO</div>
-<div class="card">
-<div>SINAL ATIVO AGORA</div>
-<div class="multiplicador">2.35x</div>
-<div class="timer">Próximo sinal em: 00:45</div>
-<div>ENTRAR ANTES DE: 1.80x</div>
-</div>
-<a href="https://wa.me/244944220447?text=Quero%20acesso%20Kelsi%20Star%20Pro" class="btn">📱 ENTRAR NO GRUPO VIP</a>
-<div style="margin-top:30px;color:#888;font-size:14px">+500 membros | Angola 🇦🇴</div>
+    <div class="logo">🚀 KELSI STAR PRO</div>
+    
+    <div class="box">
+        <p>SINAL ATIVO AGORA</p>
+        <div class="sinal" id="sinalAtual">1.50x</div>
+        <div class="status" id="statusSinal">INICIANDO SISTEMA...</div>
+        <p class="timer">Próximo sinal em: <span id="timer">00:30</span></p>
+    </div>
+
+    <a href="https://chat.whatsapp.com/GzdlWabsBKrDVYC53b8ngk" class="botao">📱 ENTRAR NO GRUPO VIP</a>
+    
+    <p style="margin-top:30px; font-size:12px;">+500 membros | Angola 🇦🇴</p>
+    <p class="aviso">*Sinais para entretenimento. Jogue com responsabilidade.</p>
+
+    <script>
+        function gerarSinal() {
+            let sinal = (Math.random() * 3.5 + 1.20).toFixed(2);
+            let cor = Math.random() > 0.45 ? 'azul' : 'vermelho';
+            let status = cor === 'azul' ? 'ENTRADA CONFIRMADA 🔵 AZUL' : 'ALERTA VERMELHO 🔴 AGUARDAR';
+            
+            document.getElementById("sinalAtual").innerText = sinal + "x";
+            document.getElementById("sinalAtual").className = "sinal " + cor;
+            document.getElementById("statusSinal").innerText = status;
+            document.getElementById("statusSinal").className = "status " + cor;
+        }
+        
+        function iniciarTimer() {
+            let tempo = 30;
+            setInterval(() => {
+                tempo--;
+                let seg = tempo < 10 ? '0' + tempo : tempo;
+                document.getElementById("timer").innerText = `00:${seg}`;
+                if(tempo <= 0) {
+                    tempo = 30;
+                    gerarSinal();
+                }
+            }, 1000);
+        }
+        
+        gerarSinal();
+        iniciarTimer();
+    </script>
 </body>
 </html>
